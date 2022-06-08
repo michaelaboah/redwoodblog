@@ -16,7 +16,7 @@ const Routes = () => {
     <Router>
       {/* <Route path="/articles" page={ArticlesPage} name="articles" />
       <Route path="/article" page={ArticlePage} name="article" />
-      <Route path="/article/{id:Int}" page={ArticlePage} name="article" /> */}
+    <Route path="/article/{id:Int}" page={ArticlePage} name="article" /> */}
       <Set wrap={PostsLayout}>
         <Route path="/posts/new" page={PostNewPostPage} name="newPost" />
         <Route path="/posts/{id:Int}/edit" page={PostEditPostPage} name="editPost" />
@@ -24,9 +24,10 @@ const Routes = () => {
         <Route path="/posts" page={PostPostsPage} name="posts" />
       </Set>
       <Set wrap={BlogLayout}>
-        <Route path="/article/{id:Int}" page={ArticlePage} name="article" />
-        <Route path="/about" page={AboutPage} name="about" />
         <Route path="/" page={HomePage} name="home" />
+        <Route path="/contact" page={ContactPage} name="contact" />
+        <Route path="/about" page={AboutPage} name="about" />
+        <Route path="/article/{id:Int}" page={ArticlePage} name="article" />
       </Set>
       <Route notfound page={NotFoundPage} />
     </Router>
